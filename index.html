@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<iframe id="subway" src="http://apps.mta.info/traintime3/index.html#/app/subwaytime/R/R33"></iframe>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        setInterval(function() {
+            var iframe = document.getElementById( 'subway' );
+            var tmp_src = iframe.src; iframe.src = ''; iframe.src = tmp_src;
+        },
+        //This is the number of miliseconds between refresh
+        1000 );
+    </script>
+</body>
+</html>
